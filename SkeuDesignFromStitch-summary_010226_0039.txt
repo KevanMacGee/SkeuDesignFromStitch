@@ -1,0 +1,616 @@
+This file is a merged representation of a subset of the codebase, containing files not matching ignore patterns, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching these patterns are excluded: .env, *.log
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.cursorindexingignore
+.gitignore
+images/Screenshot 2026-01-02 000545.png
+index-inline.html
+index.html
+README.md
+styles.css
+tailwind.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".cursorindexingignore">
+# Don't index SpecStory auto-save files, but allow explicit context inclusion via @ references
+.specstory/**
+</file>
+
+<file path=".gitignore">
+.specstory/
+</file>
+
+<file path="index-inline.html">
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Repomix Project Configuration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3B82F6", 
+                        "neu-base": "#E0E5EC",
+                        "neu-dark-shadow": "#A3B1C6",
+                        "neu-light-shadow": "#FFFFFF",
+                        "neu-text": "#4A5568",
+                        "neu-text-sub": "#A0AEC0",
+                    },
+                    boxShadow: {
+                        "neu-out": "9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5)",
+                        "neu-out-sm": "6px 6px 10px rgb(163,177,198,0.6), -6px -6px 10px rgba(255,255,255, 0.6)",
+                        "neu-in": "inset 6px 6px 10px 0 rgba(163,177,198, 0.7), inset -6px -6px 10px 0 rgba(255,255,255, 0.8)",
+                        "neu-in-sm": "inset 3px 3px 6px 0 rgba(163,177,198, 0.7), inset -3px -3px 6px 0 rgba(255,255,255, 0.8)",
+                        "neu-pressed": "inset 4px 4px 8px 0 rgba(163,177,198, 0.7), inset -4px -4px 8px 0 rgba(255,255,255, 0.9)",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #E0E5EC;
+            min-height: 100vh;
+        }.toggle-checkbox {
+            display: none;
+        }.toggle-track {
+            background-color: #E0E5EC;
+            box-shadow: inset 3px 3px 6px 0 rgba(163,177,198, 0.7), inset -3px -3px 6px 0 rgba(255,255,255, 0.8);
+            transition: all 0.3s ease;
+        }.toggle-thumb {
+            background-color: #E0E5EC;
+            box-shadow: 3px 3px 6px rgba(163,177,198,0.6), -3px -3px 6px rgba(255,255,255,0.8);
+            transform: translateX(0);
+            transition: all 0.3s ease;
+        }.toggle-checkbox:checked + .toggle-track .toggle-thumb {
+            transform: translateX(100%);
+            background-color: #3B82F6;box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #E0E5EC; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e0; 
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0; 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-neu-text font-display antialiased h-screen flex flex-col overflow-hidden selection:bg-primary/30">
+<header class="shrink-0 bg-neu-base z-20 pt-safe-top">
+<div class="flex items-center justify-between p-4 pb-2">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full bg-neu-base shadow-neu-out-sm active:shadow-neu-pressed text-neu-text hover:text-primary transition-all duration-200">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10 text-neu-text">Repomix Config</h2>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto overflow-x-hidden pb-32">
+<section class="px-5 py-6">
+<h3 class="text-neu-text text-base font-bold leading-tight tracking-wide uppercase text-xs mb-4 ml-1 opacity-70">Root Project</h3>
+<button class="w-full text-left group relative flex items-center justify-between p-3 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 active:shadow-neu-pressed active:scale-[0.98] transition-all duration-200">
+<div class="flex items-center flex-1 min-w-0 gap-4">
+<div class="size-14 shrink-0 rounded-xl bg-neu-base shadow-neu-in flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">folder_open</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-bold text-neu-text-sub uppercase tracking-wider mb-1">Selected Directory</span>
+<span class="text-sm font-bold text-neu-text truncate w-full">/Users/alex/projects/mobile-mvp</span>
+</div>
+</div>
+<div class="pr-2 pl-4">
+<span class="text-xs font-bold text-primary uppercase tracking-wider bg-neu-base shadow-neu-out-sm px-3 py-2 rounded-lg group-active:shadow-neu-in-sm transition-all border border-white/10 group-hover:text-blue-600">Change</span>
+</div>
+</button>
+</section>
+<div class="px-5">
+<div class="h-0.5 bg-neu-base shadow-neu-in rounded-full w-full"></div>
+</div>
+<section class="px-5 py-6">
+<div class="flex items-center justify-between mb-4 px-1">
+<h3 class="text-neu-text text-base font-bold leading-tight tracking-wide uppercase text-xs opacity-70">Include Subfolders</h3>
+<button class="text-primary text-xs font-bold uppercase tracking-wider hover:opacity-75 transition-opacity">Select All</button>
+</div>
+<div class="flex items-center gap-3 mb-6 px-4 py-3 bg-neu-base shadow-neu-out-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-xl">info</span>
+<p class="text-neu-text-sub text-xs font-medium leading-relaxed">Select folders to include in the context generation.</p>
+</div>
+<div class="flex flex-col gap-5">
+<label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 cursor-pointer transition-transform active:scale-[0.99]">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-xl bg-neu-base shadow-neu-in-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">folder</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-neu-text">src</span>
+<span class="text-xs text-neu-text-sub">12 files</span>
+</div>
+</div>
+<div class="relative inline-flex items-center cursor-pointer mr-1">
+<input checked="" class="toggle-checkbox" type="checkbox"/>
+<div class="w-12 h-7 rounded-full toggle-track p-1">
+<div class="w-5 h-5 rounded-full toggle-thumb"></div>
+</div>
+</div>
+</label>
+<label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 cursor-pointer transition-transform active:scale-[0.99]">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-xl bg-neu-base shadow-neu-in-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">folder</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-neu-text">components</span>
+<span class="text-xs text-neu-text-sub">24 files</span>
+</div>
+</div>
+<div class="relative inline-flex items-center cursor-pointer mr-1">
+<input checked="" class="toggle-checkbox" type="checkbox"/>
+<div class="w-12 h-7 rounded-full toggle-track p-1">
+<div class="w-5 h-5 rounded-full toggle-thumb"></div>
+</div>
+</div>
+</label>
+<label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 cursor-pointer ml-4 transition-transform active:scale-[0.99]">
+<div class="absolute -left-4 top-1/2 -translate-y-1/2 w-2 h-8 rounded-r-md bg-neu-base shadow-neu-pressed"></div>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-xl bg-neu-base shadow-neu-in-sm flex items-center justify-center text-neu-text-sub">
+<span class="material-symbols-outlined">folder</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-neu-text">utils</span>
+<span class="text-xs text-neu-text-sub">8 files</span>
+</div>
+</div>
+<div class="relative inline-flex items-center cursor-pointer mr-1">
+<input checked="" class="toggle-checkbox" type="checkbox"/>
+<div class="w-12 h-7 rounded-full toggle-track p-1">
+<div class="w-5 h-5 rounded-full toggle-thumb"></div>
+</div>
+</div>
+</label>
+<label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 cursor-pointer opacity-80 hover:opacity-100 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-xl bg-neu-base shadow-neu-in-sm flex items-center justify-center text-neu-text-sub">
+<span class="material-symbols-outlined">folder</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-neu-text">public</span>
+<span class="text-xs text-neu-text-sub">5 files</span>
+</div>
+</div>
+<div class="relative inline-flex items-center cursor-pointer mr-1">
+<input class="toggle-checkbox" type="checkbox"/>
+<div class="w-12 h-7 rounded-full toggle-track p-1">
+<div class="w-5 h-5 rounded-full toggle-thumb"></div>
+</div>
+</div>
+</label>
+<label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base/50 shadow-neu-in-sm cursor-not-allowed opacity-60">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-xl bg-neu-base shadow-neu-out-sm flex items-center justify-center text-neu-text-sub/50">
+<span class="material-symbols-outlined">folder_off</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-neu-text/60">node_modules</span>
+<span class="text-xs text-neu-text-sub">Ignored</span>
+</div>
+</div>
+<div class="relative inline-flex items-center cursor-not-allowed mr-1 opacity-50">
+<div class="w-12 h-7 rounded-full bg-neu-base shadow-neu-in-sm p-1">
+<div class="w-5 h-5 rounded-full bg-neu-text-sub/20 shadow-none"></div>
+</div>
+</div>
+</label>
+</div>
+</section>
+<section class="px-5 pb-6">
+<h3 class="text-neu-text text-base font-bold leading-tight tracking-wide uppercase text-xs mb-3 ml-1 opacity-70">Process Status</h3>
+<div class="rounded-2xl bg-neu-base shadow-neu-out p-2">
+<div class="rounded-xl bg-gray-900 shadow-[inset_2px_2px_6px_rgba(0,0,0,0.8),inset_-1px_-1px_2px_rgba(255,255,255,0.1)] p-5 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-white/5 to-transparent pointer-events-none"></div>
+<div class="flex items-center justify-between mb-4 relative z-10">
+<div class="flex items-center gap-2">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-green-500 box-shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+</span>
+<h4 class="text-green-400 text-sm font-mono tracking-wide font-bold shadow-green-500/20 drop-shadow-md">SYSTEM READY</h4>
+</div>
+<span class="text-[10px] bg-gray-800 text-gray-400 border border-gray-700 px-2 py-0.5 rounded shadow-sm font-mono tracking-widest">IDLE</span>
+</div>
+<div class="space-y-3 relative z-10 font-mono">
+<div class="flex items-center justify-between text-xs border-b border-gray-800 pb-2">
+<span class="text-gray-500">FORMAT</span>
+<span class="text-blue-300 font-bold">XML</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="text-gray-500">ESTIMATION</span>
+<span class="text-white font-medium">~12.5k tokens</span>
+</div>
+<div class="w-full bg-gray-800 rounded-full h-2 mt-2 shadow-inner border border-gray-700/50">
+<div class="bg-primary h-full rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500" style="width: 0%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-5 bg-neu-base/90 backdrop-blur-sm z-30 pb-safe-bottom">
+<button class="group w-full h-16 bg-neu-base text-primary rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all active:scale-[0.97] shadow-neu-out active:shadow-neu-pressed border border-white/20">
+<span class="material-symbols-outlined transition-transform group-hover:rotate-12 group-active:scale-90">bolt</span>
+            Run Repomix
+        </button>
+</div>
+
+</body></html>
+</file>
+
+<file path="index.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Repomix Project Configuration</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="text-neu-text font-display antialiased h-screen flex flex-col overflow-hidden selection:bg-primary/30">
+    <header class="shrink-0 bg-neu-base z-20 pt-safe-top">
+        <div class="flex items-center justify-between p-4 pb-2">
+            <button class="flex size-10 shrink-0 items-center justify-center rounded-full bg-neu-base shadow-neu-out-sm active:shadow-neu-pressed text-neu-text hover:text-primary transition-all duration-200">
+                <span class="material-symbols-outlined text-xl">arrow_back</span>
+            </button>
+            <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10 text-neu-text">Repomix Config</h2>
+        </div>
+    </header>
+
+    <main class="flex-1 overflow-y-auto overflow-x-hidden pb-32">
+        <!-- Root Project Section -->
+        <section class="px-5 py-6">
+            <h3 class="text-neu-text text-base font-bold leading-tight tracking-wide uppercase text-xs mb-4 ml-1 opacity-70">Root Project</h3>
+            <button class="w-full text-left group relative flex items-center justify-between p-3 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 active:shadow-neu-pressed active:scale-[0.98] transition-all duration-200">
+                <div class="flex items-center flex-1 min-w-0 gap-4">
+                    <div class="size-14 shrink-0 rounded-xl bg-neu-base shadow-neu-in flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">folder_open</span>
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                        <span class="text-xs font-bold text-neu-text-sub uppercase tracking-wider mb-1">Selected Directory</span>
+                        <span class="text-sm font-bold text-neu-text truncate w-full">/Users/alex/projects/mobile-mvp</span>
+                    </div>
+                </div>
+                <div class="pr-2 pl-4">
+                    <span class="text-xs font-bold text-primary uppercase tracking-wider bg-neu-base shadow-neu-out-sm px-3 py-2 rounded-lg group-active:shadow-neu-in-sm transition-all border border-white/10 group-hover:text-blue-600">Change</span>
+                </div>
+            </button>
+        </section>
+
+        <div class="px-5">
+            <div class="h-0.5 bg-neu-base shadow-neu-in rounded-full w-full"></div>
+        </div>
+
+        <!-- Include Subfolders Section -->
+        <section class="px-5 py-6">
+            <div class="flex items-center justify-between mb-4 px-1">
+                <h3 class="text-neu-text text-base font-bold leading-tight tracking-wide uppercase text-xs opacity-70">Include Subfolders</h3>
+                <button class="text-primary text-xs font-bold uppercase tracking-wider hover:opacity-75 transition-opacity">Select All</button>
+            </div>
+            <div class="flex items-center gap-3 mb-6 px-4 py-3 bg-neu-base shadow-neu-out-sm rounded-xl">
+                <span class="material-symbols-outlined text-primary text-xl">info</span>
+                <p class="text-neu-text-sub text-xs font-medium leading-relaxed">Select folders to include in the context generation.</p>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <!-- src folder -->
+                <label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 cursor-pointer transition-transform active:scale-[0.99]">
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-xl bg-neu-base shadow-neu-in-sm flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">folder</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-bold text-neu-text">src</span>
+                            <span class="text-xs text-neu-text-sub">12 files</span>
+                        </div>
+                    </div>
+                    <div class="relative inline-flex items-center cursor-pointer mr-1">
+                        <input checked="" class="toggle-checkbox" type="checkbox"/>
+                        <div class="w-12 h-7 rounded-full toggle-track p-1">
+                            <div class="w-5 h-5 rounded-full toggle-thumb"></div>
+                        </div>
+                    </div>
+                </label>
+
+                <!-- components folder -->
+                <label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 cursor-pointer transition-transform active:scale-[0.99]">
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-xl bg-neu-base shadow-neu-in-sm flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">folder</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-bold text-neu-text">components</span>
+                            <span class="text-xs text-neu-text-sub">24 files</span>
+                        </div>
+                    </div>
+                    <div class="relative inline-flex items-center cursor-pointer mr-1">
+                        <input checked="" class="toggle-checkbox" type="checkbox"/>
+                        <div class="w-12 h-7 rounded-full toggle-track p-1">
+                            <div class="w-5 h-5 rounded-full toggle-thumb"></div>
+                        </div>
+                    </div>
+                </label>
+
+                <!-- utils folder (nested) -->
+                <label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 cursor-pointer ml-4 transition-transform active:scale-[0.99]">
+                    <div class="absolute -left-4 top-1/2 -translate-y-1/2 w-2 h-8 rounded-r-md bg-neu-base shadow-neu-pressed"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-xl bg-neu-base shadow-neu-in-sm flex items-center justify-center text-neu-text-sub">
+                            <span class="material-symbols-outlined">folder</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-bold text-neu-text">utils</span>
+                            <span class="text-xs text-neu-text-sub">8 files</span>
+                        </div>
+                    </div>
+                    <div class="relative inline-flex items-center cursor-pointer mr-1">
+                        <input checked="" class="toggle-checkbox" type="checkbox"/>
+                        <div class="w-12 h-7 rounded-full toggle-track p-1">
+                            <div class="w-5 h-5 rounded-full toggle-thumb"></div>
+                        </div>
+                    </div>
+                </label>
+
+                <!-- public folder -->
+                <label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base shadow-neu-out border border-white/20 cursor-pointer opacity-80 hover:opacity-100 transition-all">
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-xl bg-neu-base shadow-neu-in-sm flex items-center justify-center text-neu-text-sub">
+                            <span class="material-symbols-outlined">folder</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-bold text-neu-text">public</span>
+                            <span class="text-xs text-neu-text-sub">5 files</span>
+                        </div>
+                    </div>
+                    <div class="relative inline-flex items-center cursor-pointer mr-1">
+                        <input class="toggle-checkbox" type="checkbox"/>
+                        <div class="w-12 h-7 rounded-full toggle-track p-1">
+                            <div class="w-5 h-5 rounded-full toggle-thumb"></div>
+                        </div>
+                    </div>
+                </label>
+
+                <!-- node_modules folder (disabled) -->
+                <label class="group relative flex items-center justify-between p-4 rounded-2xl bg-neu-base/50 shadow-neu-in-sm cursor-not-allowed opacity-60">
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-xl bg-neu-base shadow-neu-out-sm flex items-center justify-center text-neu-text-sub/50">
+                            <span class="material-symbols-outlined">folder_off</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-bold text-neu-text/60">node_modules</span>
+                            <span class="text-xs text-neu-text-sub">Ignored</span>
+                        </div>
+                    </div>
+                    <div class="relative inline-flex items-center cursor-not-allowed mr-1 opacity-50">
+                        <div class="w-12 h-7 rounded-full bg-neu-base shadow-neu-in-sm p-1">
+                            <div class="w-5 h-5 rounded-full bg-neu-text-sub/20 shadow-none"></div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </section>
+
+        <!-- Process Status Section -->
+        <section class="px-5 pb-6">
+            <h3 class="text-neu-text text-base font-bold leading-tight tracking-wide uppercase text-xs mb-3 ml-1 opacity-70">Process Status</h3>
+            <div class="rounded-2xl bg-neu-base shadow-neu-out p-2">
+                <div class="rounded-xl bg-gray-900 shadow-[inset_2px_2px_6px_rgba(0,0,0,0.8),inset_-1px_-1px_2px_rgba(255,255,255,0.1)] p-5 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-white/5 to-transparent pointer-events-none"></div>
+                    <div class="flex items-center justify-between mb-4 relative z-10">
+                        <div class="flex items-center gap-2">
+                            <span class="relative flex h-3 w-3">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500 box-shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+                            </span>
+                            <h4 class="text-green-400 text-sm font-mono tracking-wide font-bold shadow-green-500/20 drop-shadow-md">SYSTEM READY</h4>
+                        </div>
+                        <span class="text-[10px] bg-gray-800 text-gray-400 border border-gray-700 px-2 py-0.5 rounded shadow-sm font-mono tracking-widest">IDLE</span>
+                    </div>
+                    <div class="space-y-3 relative z-10 font-mono">
+                        <div class="flex items-center justify-between text-xs border-b border-gray-800 pb-2">
+                            <span class="text-gray-500">FORMAT</span>
+                            <span class="text-blue-300 font-bold">XML</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-gray-500">ESTIMATION</span>
+                            <span class="text-white font-medium">~12.5k tokens</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-2 mt-2 shadow-inner border border-gray-700/50">
+                            <div class="bg-primary h-full rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed Bottom Button -->
+    <div class="fixed bottom-0 left-0 right-0 p-5 bg-neu-base/90 backdrop-blur-sm z-30 pb-safe-bottom">
+        <button class="group w-full h-16 bg-neu-base text-primary rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all active:scale-[0.97] shadow-neu-out active:shadow-neu-pressed border border-white/20">
+            <span class="material-symbols-outlined transition-transform group-hover:rotate-12 group-active:scale-90">bolt</span>
+            Run Repomix
+        </button>
+    </div>
+</body>
+</html>
+</file>
+
+<file path="styles.css">
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #E0E5EC; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e0; 
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0; 
+}
+
+/* Base body styles */
+body {
+    background-color: #E0E5EC;
+    min-height: max(884px, 100dvh);
+}
+
+/* Toggle switch styles */
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-track {
+    background-color: #E0E5EC;
+    box-shadow: inset 3px 3px 6px 0 rgba(163,177,198, 0.7), inset -3px -3px 6px 0 rgba(255,255,255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.toggle-thumb {
+    background-color: #E0E5EC;
+    box-shadow: 3px 3px 6px rgba(163,177,198,0.6), -3px -3px 6px rgba(255,255,255,0.8);
+    transform: translateX(0);
+    transition: all 0.3s ease;
+}
+
+.toggle-checkbox:checked + .toggle-track .toggle-thumb {
+    transform: translateX(100%);
+    background-color: #3B82F6;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+</file>
+
+<file path="tailwind.config.js">
+// Tailwind CSS configuration for Repomix Project
+// This config is used with the Tailwind CDN via inline script in index.html
+
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                "primary": "#3B82F6", 
+                "neu-base": "#E0E5EC",
+                "neu-dark-shadow": "#A3B1C6",
+                "neu-light-shadow": "#FFFFFF",
+                "neu-text": "#4A5568",
+                "neu-text-sub": "#A0AEC0",
+            },
+            boxShadow: {
+                "neu-out": "9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5)",
+                "neu-out-sm": "6px 6px 10px rgb(163,177,198,0.6), -6px -6px 10px rgba(255,255,255, 0.6)",
+                "neu-in": "inset 6px 6px 10px 0 rgba(163,177,198, 0.7), inset -6px -6px 10px 0 rgba(255,255,255, 0.8)",
+                "neu-in-sm": "inset 3px 3px 6px 0 rgba(163,177,198, 0.7), inset -3px -3px 6px 0 rgba(255,255,255, 0.8)",
+                "neu-pressed": "inset 4px 4px 8px 0 rgba(163,177,198, 0.7), inset -4px -4px 8px 0 rgba(255,255,255, 0.9)",
+            },
+            fontFamily: {
+                "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "2xl": "1rem",
+                "full": "9999px"
+            },
+        },
+    },
+};
+</file>
+
+<file path="README.md">
+<br><br><br>
+
+<p align="center">
+  <img src="images/Screenshot 2026-01-02 000545.png" alt="Repomix Config UI">
+</p>
+</file>
+
+</files>
